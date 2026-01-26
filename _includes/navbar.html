@@ -1,0 +1,11 @@
+<header>
+    <nav>
+        <div class="nav-container">
+            <a href="{{ '/' | relative_url }}" class="logo">belle<span class="logo-dot">.</span></a>
+            <div class="nav-links">
+                <a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' %}class="active"{% endif %}>Writing</a>
+                <a href="{{ '/about' | relative_url }}" {% if page.url == '/about.html' or page.url == '/about' %}class="active"{% endif %}>About</a>
+            </div>
+        </div>
+    </nav>
+</header>

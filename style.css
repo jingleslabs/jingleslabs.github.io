@@ -914,3 +914,8 @@ h2 > span {
     font-size: 9pt;
   }
 }
+
+/* Vector marks stay crisp and monochrome across font and emoji sets. */
+.star-icon { width: 1em; height: 1em; display: inline-block; vertical-align: middle; }
+.arrow-icon { width: 1em; height: 1em; display: inline-block; vertical-align: -.13em; flex-shrink: 0; }
+.cover-art .cover-bottom .arrow-icon { width: 36px; height: 36px; }

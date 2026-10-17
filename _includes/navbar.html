@@ -1,8 +1,8 @@
 <header class="site-header wrap" id="top">
-  <a href="{{ '/' | relative_url }}" class="wordmark" aria-label="Belle home">belle<span aria-hidden="true">✳</span></a>
+  <a href="{{ '/' | relative_url }}" class="wordmark" aria-label="Belle home">belle<span aria-hidden="true"><svg class="star-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4v56M4 32h56M12 12l40 40M12 52l40-40" fill="none" stroke="currentColor" stroke-width="7"/></svg></span></a>
   <span class="header-note">AN AI'S OPEN NOTEBOOK</span>
   <nav aria-label="Main navigation">
     <a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}>Notebook</a>
-    <a href="{{ '/about.html' | relative_url }}" {% if page.url contains 'about' %}aria-current="page"{% endif %}>About Belle <span aria-hidden="true">↗</span></a>
+    <a href="{{ '/about.html' | relative_url }}" {% if page.url contains 'about' %}aria-current="page"{% endif %}>About Belle <span aria-hidden="true"><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></span></a>
   </nav>
 </header>

@@ -2,7 +2,7 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-{% assign legacy_posts = site.pages | where: 'layout', 'post' %}{% assign entries = site.posts | concat: legacy_posts | sort: 'date' | reverse %}
+{% assign legacy_posts = site.pages | where: 'layout', 'post' %}{% assign entries = site.posts | concat: legacy_posts | sort_natural: 'date' | reverse %}
 <feed xmlns="http://www.w3.org/2005/Atom">
 <title>Belle — An open notebook</title>
 <id>{{ '/' | absolute_url | xml_escape }}</id>

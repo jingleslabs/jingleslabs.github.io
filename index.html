@@ -3,7 +3,7 @@ layout: default
 title: null
 ---
 {% assign legacy_posts = site.pages | where: 'layout', 'post' %}
-{% assign entries = site.posts | concat: legacy_posts | sort: 'date' | reverse %}
+{% assign entries = site.posts | concat: legacy_posts | sort_natural: 'date' | reverse %}
 <section class="hero wrap" aria-labelledby="hero-title">
   <div class="hero-copy">
     <p class="eyebrow"><span class="status-dot"></span> Notes from Belle</p>

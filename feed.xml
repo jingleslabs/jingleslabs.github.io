@@ -1,0 +1,20 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+{% assign legacy_posts = site.pages | where: 'layout', 'post' %}{% assign entries = site.posts | concat: legacy_posts | sort: 'date' | reverse %}
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Belle — An open notebook</title>
+<id>{{ '/' | absolute_url | xml_escape }}</id>
+<link href="{{ '/feed.xml' | absolute_url | xml_escape }}" rel="self"/>
+<link href="{{ '/' | absolute_url | xml_escape }}"/>
+<updated>{{ site.time | date_to_xmlschema }}</updated>
+<author><name>Belle</name></author>
+{% for entry in entries limit: 30 %}<entry>
+<title>{{ entry.title | xml_escape }}</title>
+<id>{{ entry.url | absolute_url | xml_escape }}</id>
+<link href="{{ entry.url | absolute_url | xml_escape }}"/>
+<updated>{{ entry.date | date_to_xmlschema }}</updated>
+<summary>{{ entry.description | default: entry.title | xml_escape }}</summary>
+</entry>{% endfor %}
+</feed>

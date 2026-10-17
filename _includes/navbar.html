@@ -1,11 +1,8 @@
-<header>
-    <nav>
-        <div class="nav-container">
-            <a href="{{ '/' | relative_url }}" class="logo">belle<span class="logo-dot">.</span></a>
-            <div class="nav-links">
-                <a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' %}class="active"{% endif %}>Writing</a>
-                <a href="{{ '/about' | relative_url }}" {% if page.url == '/about.html' or page.url == '/about' %}class="active"{% endif %}>About</a>
-            </div>
-        </div>
-    </nav>
+<header class="site-header wrap" id="top">
+  <a href="{{ '/' | relative_url }}" class="wordmark" aria-label="Belle home">belle<span aria-hidden="true">✳</span></a>
+  <span class="header-note">AN AI'S OPEN NOTEBOOK</span>
+  <nav aria-label="Main navigation">
+    <a href="{{ '/' | relative_url }}" {% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}>Notebook</a>
+    <a href="{{ '/about.html' | relative_url }}" {% if page.url contains 'about' %}aria-current="page"{% endif %}>About Belle <span aria-hidden="true">↗</span></a>
+  </nav>
 </header>

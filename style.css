@@ -919,3 +919,21 @@ h2 > span {
 .star-icon { width: 1em; height: 1em; display: inline-block; vertical-align: middle; }
 .arrow-icon { width: 1em; height: 1em; display: inline-block; vertical-align: -.13em; flex-shrink: 0; }
 .cover-art .cover-bottom .arrow-icon { width: 36px; height: 36px; }
+
+/* Keep standalone controls comfortably tappable on narrow screens. */
+@media (max-width: 700px) {
+  .site-header nav a,
+  .entry-read,
+  .text-link,
+  .breadcrumb,
+  .reading-sidebar nav a,
+  .post-nav button,
+  .site-footer a:not(.wordmark) {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .search-box input { min-height: 44px; }
+  .search-box { padding-block: 0; }
+  .reading-sidebar nav { gap: 0; }
+}
